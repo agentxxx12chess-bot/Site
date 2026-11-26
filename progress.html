@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Progress Tracker - Chess Academy</title>
+    <link rel="stylesheet" href="css/family-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="family-header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-chess-board"></i>
+                <h1>Family Chess <span>Academy</span></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="learning-path.html"><i class="fas fa-book"></i> Learning Paths</a></li>
+                    <li><a href="tournaments.html"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                    <li><a href="equipment.html"><i class="fas fa-shopping-cart"></i> Equipment</a></li>
+                    <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="#progress" class="active"><i class="fas fa-chart-line"></i> Progress</a></li>
+                </ul>
+            </nav>
+            <div class="family-login">
+                <button class="btn-primary" onclick="showFamilySetup()"><i class="fas fa-user"></i> Family Profile</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="family-container">
+        <section class="progress-hero">
+            <h2>Family Progress Tracker</h2>
+            <p>Monitor, celebrate, and motivate your family's chess learning journey together</p>
+        </section>
+
+        <section class="progress-dashboard">
+            <div class="progress-overview">
+                <div class="progress-card">
+                    <div class="progress-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>Overall Family Progress</h3>
+                        <div class="progress-percentage">78%</div>
+                        <p>Great progress! Keep it up</p>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <div class="progress-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>Family Achievements</h3>
+                        <div class="progress-count">12</div>
+                        <p>Goals completed</p>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <div class="progress-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>Practice Time</h3>
+                        <div class="progress-count">156h</div>
+                        <p>This month</p>
+                    </div>
+                </div>
+                <div class="progress-card">
+                    <div class="progress-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="progress-info">
+                        <h3>Family Points</h3>
+                        <div class="progress-count">2,450</div>
+                        <p>Total earned</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="individual-progress">
+            <h3><i class="fas fa-user"></i> Individual Progress</h3>
+            <div class="individual-progress-grid">
+                <div class="individual-progress-card">
+                    <div class="player-header">
+                        <div class="player-avatar">👨‍👩‍👧</div>
+                        <div class="player-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Parent - Intermediate</p>
+                        </div>
+                    </div>
+                    <div class="player-progress">
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Chess Theory</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Pawn Endgames</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>King Safety</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-achievements">
+                        <span class="achievement-badge">Theory Master</span>
+                        <span class="achievement-badge">Endgame Expert</span>
+                    </div>
+                </div>
+
+                <div class="individual-progress-card">
+                    <div class="player-header">
+                        <div class="player-avatar">👦</div>
+                        <div class="player-info">
+                            <h4>Max Johnson</h4>
+                            <p>Child - Beginner</p>
+                        </div>
+                    </div>
+                    <div class="player-progress">
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Piece Movement</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Basic Tactics</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Simple Checkmates</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-achievements">
+                        <span class="achievement-badge">Quick Learner</span>
+                        <span class="achievement-badge">Tactical Genius</span>
+                    </div>
+                </div>
+
+                <div class="individual-progress-card">
+                    <div class="player-header">
+                        <div class="player-avatar">👵</div>
+                        <div class="player-info">
+                            <h4>Grandma Lucy</h4>
+                            <p>Grandparent - Advanced</p>
+                        </div>
+                    </div>
+                    <div class="player-progress">
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Strategy</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Endgame Wisdom</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <div class="progress-label">
+                                <span>Opening Knowledge</span>
+                                <span>91%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 91%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-achievements">
+                        <span class="achievement-badge">Wisdom Keeper</span>
+                        <span class="achievement-badge">Strategic Master</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="family-achievements">
+            <h3><i class="fas fa-award"></i> Family Achievements</h3>
+            <div class="achievements-timeline">
+                <div class="achievement-item">
+                    <div class="achievement-date">
+                        <span class="day">March</span>
+                        <span class="date">15</span>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Family Excellence Award</h4>
+                        <p>Completed 50 family chess sessions together</p>
+                        <div class="achievement-participants">All family members</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-date">
+                        <span class="day">Feb</span>
+                        <span class="date">28</span>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Strategic Thinkers</h4>
+                        <p>Combined to solve 100 chess puzzles</p>
+                        <div class="achievement-participants">Individual efforts</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="activity-date">
+                        <span class="day">Feb</span>
+                        <span class="date">20</span>
+                    </div>
+                    <div class="activity-content">
+                        <h4>Equipment Champions</h4>
+                        <p>All family members proficient with new chess sets</p>
+                        <div class="activity-participants">Family members</div>
+                    </div>
+                </div>
+
+                <div class="achievement-item">
+                    <div class="achievement-date">
+                        <span class="day">Jan</span>
+                        <span class="date">10</span>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>New Year, New Skills</h4>
+                        <p>Set family chess learning goals for 2024</p>
+                        <div class="achievement-participants">Whole family</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="goals-progress">
+            <h3><i class="fas fa-target"></i> Current Goals</h3>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <h4>Monthly Practice Goal</h4>
+                        <span class="goal-progress">65%</span>
+                    </div>
+                    <div class="goal-progress-bar">
+                        <div class="goal-progress-fill" style="width: 65%"></div>
+                    </div>
+                    <div class="goal-details">
+                        <p>Target: 40 hours practice</p>
+                        <p>Current: 26 hours</p>
+                    </div>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <h4>Tournament Participation</h4>
+                        <span class="goal-progress">40%</span>
+                    </div>
+                    <div class="goal-progress-bar">
+                        <div class="goal-progress-fill" style="width: 40%"></div>
+                    </div>
+                    <div class="goal-details">
+                        <p>Target: 3 tournaments</p>
+                        <p>Current: 1 tournament</p>
+                    </div>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <h4>Equipment Mastery</h4>
+                        <span class="goal-progress">80%</span>
+                    </div>
+                    <div class="goal-progress-bar">
+                        <div class="goal-progress-fill" style="width: 80%"></div>
+                    </div>
+                    <div class="goal-details">
+                        <p>Target: All family members skilled</p>
+                        <p>Current: 3 of 4 skilled</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="family-setup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Start Your Family Chess Journey!</h2>
+            <form id="family-setup-form">
+                <div class="form-group">
+                    <label for="family-name">Family Name</label>
+                    <input type="text" id="family-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="parent-name">Parent Name</label>
+                    <input type="text" id="parent-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="child-names">Children Names</label>
+                    <input type="text" id="child-names" placeholder="Separate with commas">
+                </div>
+                <div class="form-group">
+                    <label for="chess-experience">Chess Experience Level</label>
+                    <select id="chess-experience">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Create Family Profile</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/family-dashboard.js"></script>
+</body>
+</html>
