@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Tournaments - Chess Academy</title>
+    <link rel="stylesheet" href="css/family-dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="family-header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-chess-board"></i>
+                <h1>Family Chess <span>Academy</span></h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="learning-path.html"><i class="fas fa-book"></i> Learning Paths</a></li>
+                    <li><a href="#tournaments" class="active"><i class="fas fa-trophy"></i> Tournaments</a></li>
+                    <li><a href="#equipment"><i class="fas fa-shopping-cart"></i> Equipment</a></li>
+                    <li><a href="#community"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="#progress"><i class="fas fa-chart-line"></i> Progress</a></li>
+                </ul>
+            </nav>
+            <div class="family-login">
+                <button class="btn-primary" onclick="showFamilySetup()"><i class="fas fa-user"></i> Family Profile</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="family-container">
+        <section class="tournaments-hero">
+            <h2>Family Tournament Hub</h2>
+            <p>Connect with other chess families and compete in fun, family-friendly tournaments</p>
+        </section>
+
+        <section class="tournament-calendar">
+            <h3><i class="fas fa-calendar-alt"></i> Upcoming Tournaments</h3>
+            <div class="calendar-grid">
+                <div class="calendar-item">
+                    <div class="calendar-date">
+                        <span class="day">Sat</span>
+                        <span class="number">16</span>
+                    </div>
+                    <div class="calendar-content">
+                        <h4>Weekend Warrior Series</h4>
+                        <p>Family team tournament - Mixed age teams compete</p>
+                        <div class="tournament-meta">
+                            <span><i class="fas fa-users"></i> 4 players per team</span>
+                            <span><i class="fas fa-star"></i> Prize pool: $100</span>
+                        </div>
+                        <button class="btn-primary">Register Team</button>
+                    </div>
+                </div>
+
+                <div class="calendar-item">
+                    <div class="calendar-date">
+                        <span class="day">Sun</span>
+                        <span class="number">17</span>
+                    </div>
+                    <div class="calendar-content">
+                        <h4>Legacy Champion Challenge</h4>
+                        <p>Grandparent-child pairs showcase chess skills</p>
+                        <div class="tournament-meta">
+                            <span><i class="fas fa-heart"></i> Family pairs only</span>
+                            <span><i class="fas fa-trophy"></i> Special skills challenge</span>
+                        </div>
+                        <button class="btn-primary">Register Pair</button>
+                    </div>
+                </div>
+
+                <div class="calendar-item">
+                    <div class="calendar-date">
+                        <span class="day">Next</span>
+                        <span class="number">23</span>
+                    </div>
+                    <div class="calendar-content">
+                        <h4>Family Chess Championship</h4>
+                        <p>Ultimate family chess competition - Individual matches</p>
+                        <div class="tournament-meta">
+                            <span><i class="fas fa-chess-king"></i> Individual play</span>
+                            <span><i class="fas fa-medal"></i> Championship titles</span>
+                        </div>
+                        <button class="btn-primary">Register Individual</button>
+                    </div>
+                </div>
+
+                <div class="calendar-item">
+                    <div class="calendar-date">
+                        <span class="day">Next</span>
+                        <span class="number">30</span>
+                    </div>
+                    <div class="calendar-content">
+                        <h4>Strategy Showcase</h4>
+                        <p>Family strategy night with simultaneous exhibitions</p>
+                        <div class="tournament-meta">
+                            <span><i class="fas fa-chess-board"></i> 8 tables</span>
+                            <span><i class="fas fa-users"></i> All family members welcome</span>
+                        </div>
+                        <button class="btn-primary">Attend Event</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tournament-types">
+            <h3><i class="fas fa-trophy"></i> Tournament Formats</h3>
+            <div class="formats-grid">
+                <div class="format-card">
+                    <div class="format-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Family Team Tournament</h4>
+                    <p>2-4 family members team up for mixed-age competition</p>
+                    <ul class="format-features">
+                        <li>Flexible age requirements</li>
+                        <li>Collaborative strategy</li>
+                        <li>Great for bonding</li>
+                    </ul>
+                </div>
+
+                <div class="format-card">
+                    <div class="format-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Grandparent-Child Pairs</h4>
+                    <p>Special intergenerational tournament format</p>
+                    <ul class="format-features">
+                        <li>Wisdom meets strategy</li>
+                        <li>Legacy building</li>
+                        <li>Family history</li>
+                    </ul>
+                </div>
+
+                <div class="format-card">
+                    <div class="format-icon">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h4>Individual Challenge</h4>
+                    <p>Personal chess mastery demonstration</p>
+                    <ul class="format-features">
+                        <li>Skill-based ranking</li>
+                        <li>Personal achievement</li>
+                        <li>Progress showcase</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="tournament-bracket">
+            <h3><i class="fas fa-bracket"></i> Tournament Standings</h3>
+            <div class="standings-table">
+                <div class="table-header">
+                    <div class="rank-col">Rank</div>
+                    <div class="team-col">Team/Family</div>
+                    <div class="matches-col">Matches</div>
+                    <div class="wins-col">Wins</div>
+                    <div class="points-col">Points</div>
+                    <div class="progress-col">Progress</div>
+                </div>
+                <div class="table-row">
+                    <div class="rank-col">1</div>
+                    <div class="team-col">
+                        <div class="team-info">
+                            <span class="team-name">The Smiths - Team A</span>
+                            <span class="team-members">Dad, Lily, Max</span>
+                        </div>
+                    </div>
+                    <div class="matches-col">6</div>
+                    <div class="wins-col">5</div>
+                    <div class="points-col">15.5</div>
+                    <div class="progress-col">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="rank-col">2</div>
+                    <div class="team-col">
+                        <div class="team-info">
+                            <span class="team-name">The Jones Family</span>
+                            <span class="team-members">Grandma Lucy, Daughter, Son</span>
+                        </div>
+                    </div>
+                    <div class="matches-col">5</div>
+                    <div class="wins-col">4</div>
+                    <div class="points-col">12.0</div>
+                    <div class="progress-col">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="rank-col">3</div>
+                    <div class="team-col">
+                        <div class="team-info">
+                            <span class="team-name">The Browns - Young Lions</span>
+                            <span class="team-members">Max, Lily, Sam</span>
+                        </div>
+                    </div>
+                    <div class="matches-col">7</div>
+                    <div class="wins-col">3</div>
+                    <div class="points-col">9.5</div>
+                    <div class="progress-col">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 55%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tournament-rules">
+            <h3><i class="fas fa-file-alt"></i> Tournament Rules & Guidelines</h3>
+            <div class="rules-content">
+                <div class="rule-section">
+                    <h4>Eligibility</h4>
+                    <ul>
+                        <li>All family members aged 6 and above</li>
+                        <li>Registration closes 24 hours before tournament</li>
+                        <li>Each participant must have a valid family account</li>
+                    </ul>
+                </div>
+                <div class="rule-section">
+                    <h4>Format</h4>
+                    <ul>
+                        <li>Standard chess rules apply</li>
+                        <li>15-minute time controls for younger players</li>
+                        <li>45-minute time controls for older players</li>
+                        <li>Mixed-age teams with handicaps available</li>
+                    </ul>
+                </div>
+                <div class="rule-section">
+                    <h4>Prizes</h4>
+                    <ul>
+                        <li>Individual trophies for top finishers</li>
+                        <li>Family achievement awards</li>
+                        <li>Recognition certificates for all participants</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="family-setup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Start Your Family Chess Journey!</h2>
+            <form id="family-setup-form">
+                <div class="form-group">
+                    <label for="family-name">Family Name</label>
+                    <input type="text" id="family-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="parent-name">Parent Name</label>
+                    <input type="text" id="parent-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="child-names">Children Names</label>
+                    <input type="text" id="child-names" placeholder="Separate with commas">
+                </div>
+                <div class="form-group">
+                    <label for="chess-experience">Chess Experience Level</label>
+                    <select id="chess-experience">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Create Family Profile</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/family-dashboard.js"></script>
+</body>
+</html>
